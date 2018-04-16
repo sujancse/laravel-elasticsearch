@@ -60,12 +60,7 @@ class PostController extends Controller
             'index' => 'blog',
             'type' => 'post',
             'body' => [
-                'query' => $query,
-                'highlight' => [
-                    'fields' => [
-                        'content' => []
-                    ]
-                ]
+                'query' => $query
             ]
         ];
 
