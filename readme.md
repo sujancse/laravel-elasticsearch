@@ -11,7 +11,7 @@ php artisan migrate
 php artisan db:seed
 ```
 
-If you are using <b>Docker</b> then run 
+If you are using <b>Docker</b> then run
 ```
 docker-compose exec app composer install
 ```
@@ -19,7 +19,7 @@ docker-compose exec app composer install
 docker-compose exec app php artisan migrate
 ```
 ```
-docker-compose exec elasticsearch php artisan db:seed
+docker-compose exec app php artisan db:seed
 ```
 
 Hit the url:
