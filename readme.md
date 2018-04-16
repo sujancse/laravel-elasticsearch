@@ -1,1 +1,1 @@
-# Laravel application for testing purposes only
+# Laravel-elasticsearch application for testing purposes only
