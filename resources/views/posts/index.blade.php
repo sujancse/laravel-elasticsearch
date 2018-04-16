@@ -4,7 +4,7 @@
 
 @section('content')
     @foreach($posts as $post)
-        <h3>{{ $post->title }}</h3>
+        <h5>{{ $post->title }}</h5>
         <p>{{ $post->content }}</p>
     @endforeach
 

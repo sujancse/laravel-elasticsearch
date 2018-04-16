@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
         // but I like to explicitly undo what I've done for clarity
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
+        $this->call(PostSeeder::class);
+
     }
 }

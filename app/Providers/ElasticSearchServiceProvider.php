@@ -37,27 +37,6 @@ class ElasticSearchServiceProvider extends ServiceProvider
                 'id' => $post->id,
             ]);
         });
-
-        Article::saved(function ($article) use ($elastic) {
-
-            $elastic->index([
-                'index' => 'blog',
-                'type' => 'article',
-                'id' => $article->id,
-                'body' => [
-                    'title' => $article->title
-                ]
-            ]);
-        });
-
-        Article::deleted(function ($article) use ($elastic) {
-
-            $elastic->delete([
-                'index' => 'blog',
-                'type' => 'article',
-                'id' => $article->id,
-            ]);
-        });
     }
 
     /**

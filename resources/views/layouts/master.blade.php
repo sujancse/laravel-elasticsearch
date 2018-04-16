@@ -71,7 +71,7 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="https://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
 
-{{--<script>
+<!-- <script>
     $(document).ready(function(){
 
         $("#search_keyword").on('keyup', function(e){
@@ -85,12 +85,12 @@
                data: { search: search },
 
                success:function(data){
-                  alert(JSON.parse(data));
+                  console.log(JSON.parse(data));
                }
             });
         });
     });
-</script>--}}
+</script> -->
 
 </body>
 </html>

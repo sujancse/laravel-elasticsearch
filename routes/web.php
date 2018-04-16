@@ -11,31 +11,13 @@
 |
 */
 
-Route::get('/test', function(){
-	return \DB::select("select * from regions");
-});
-
 Route::get('/', function () {
   return view('welcome');
-});
-
-Route::get('employee', 'EmployeeController@index');
-
-Route::get('array-shift', function(){
-  $input = array("red", "green", "blue", "yellow");
-  print_r($input);
-  echo "<br>";
-  array_splice($input, -1, 1, array("black", "maroon"));
-  print_r($input);
 });
 
 Route::resource('posts', 'PostController');
 
 Route::post('search', 'PostController@search');
-
-Route::resource('articles', 'ArticleController');
-
-Route::post('article-search', 'ArticleController@search');
 
 Auth::routes();
 

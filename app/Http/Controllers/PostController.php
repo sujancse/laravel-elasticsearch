@@ -61,11 +61,17 @@ class PostController extends Controller
             'type' => 'post',
             'body' => [
                 'query' => $query,
-                'size' => 0
+                'highlight' => [
+                    'fields' => [
+                        'content' => []
+                    ]
+                ]
             ]
         ];
 
         $response = $elastic->search($parameters);
+
+        $response = $response['hits']['hits'];
 
         return $response;
 
