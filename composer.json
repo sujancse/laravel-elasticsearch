@@ -7,13 +7,14 @@
     "require": {
         "php": ">=5.6.4",
         "barryvdh/laravel-debugbar": "^2.3",
+        "elasticsearch/elasticsearch": "^5.2",
+        "laracasts/flash": "^3.0",
         "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "laravelcollective/html": "^5.4"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
-        "laracasts/testdummy": "^2.3",
-        "laracasts/generators": "master",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.7"
     },
@@ -49,6 +50,5 @@
     "config": {
         "preferred-install": "dist",
         "sort-packages": true
-    },
-    "minimum-stability": "dev"
+    }
 }
