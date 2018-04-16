@@ -33,7 +33,7 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
         </ul>
-        {{ Form::open(['action' => 'PostController@search','class' => "form-inline my-2 my-lg-0"]) }}
+        {{ Form::open(['action' => 'PostController@search','class' => "form-inline my-2 my-lg-0",'method' => 'GET']) }}
             <input class="form-control mr-sm-2" name="search" id="search_keyword" type="text" placeholder="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" id="search" type="submit">Search</button>
         {{ Form::close() }}

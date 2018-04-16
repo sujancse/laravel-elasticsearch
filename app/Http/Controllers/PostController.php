@@ -13,7 +13,7 @@ class PostController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(){
-        $posts = Post::paginate(20);
+        $posts = Post::orderBy('id','desc')->paginate(20);
 		return view('posts.index', compact('posts'));
 	}
 
@@ -60,6 +60,8 @@ class PostController extends Controller
             'index' => 'blog',
             'type' => 'post',
             'body' => [
+                "from" => 0,
+                "size" => 20,
                 'query' => $query
             ]
         ];
